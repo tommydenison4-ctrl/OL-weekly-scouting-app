@@ -120,10 +120,11 @@ const ULM_FORMATION_MAP={
   'TRIPS - SLOT':'TOP'
 };
 function formationName(r){
-  const tagged=v(r,'Tommy_Formation');
-  if(tagged && tagged.toUpperCase()!=='REVIEW') return tagged;
+  // Translate the actual PFF formation name into ULM terminology.
+  // Do not use Tommy_Formation here: that column can contain a different internal formation code.
   const raw=v(r,'pff_OFFENSIVE_FORMATION_NAME','pff_STARTING_OFFENSIVE_FORMATION_NAME','pff_OFFFORMATION');
-  return ULM_FORMATION_MAP[String(raw||'').trim().toUpperCase()] || raw || 'Unknown';
+  const key=String(raw||'').trim().toUpperCase();
+  return ULM_FORMATION_MAP[key] || raw || 'Unknown';
 }
 function rawFormationName(r){return v(r,'pff_OFFENSIVE_FORMATION_NAME','pff_STARTING_OFFENSIVE_FORMATION_NAME','pff_OFFFORMATION')||'Unknown'}
 function initFilters(){fillSelect('fDown',defense.map(r=>v(r,'pff_DOWN')).filter(Boolean),downLabel);fillSelect('fPers',defense.map(r=>v(r,'pff_OFFPERSONNELBASIC','pff_OFFPERSONNEL')));fillSelect('fForm',defense.map(r=>formationName(r)));fillSelect('fRB',defense.map(r=>v(r,'pff_RBALIGNMENT','pff_BACKSET')));fillSelect('fTE',defense.map(r=>v(r,'pff_TEALIGNMENT')));fillSelect('fHash',defense.map(r=>v(r,'pff_HASH')));fillSelect('fRP',defense.map(r=>v(r,'pff_RUNPASS')))}
