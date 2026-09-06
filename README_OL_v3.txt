@@ -1,4 +1,10 @@
-Cameron Blankenship OL Weekly Scouting Engine v3
+Cameron Blankenship OL Weekly Scouting Engine v4
+
+Dark-mode ULM build with a two-opponent toggle:
+- UAB loads first
+- Mississippi State remains available on the same screen
+- Both complete play feeds are embedded in a local JavaScript dataset, so switching works when index.html is opened directly from Windows
+- The actual maroon star ULM roundel is packaged in the assets folder
 
 This build is organized around Cam's exact questions:
 1. Front: Even / Odd / Special
@@ -11,7 +17,7 @@ This build is organized around Cam's exact questions:
 8. Personnel matching and sub-packages
 9. 3rd-down / special packages
 
-The engine uses the same Supabase current.csv as the RB engine.
+The engine uses packaged weekly play feeds for UAB and Mississippi State.
 Directional answers are shown only when the source data supports them; uncharted directional snaps are not guessed.
 
 Deploy: replace the existing GitHub index.html with this index.html. Vercel should redeploy automatically.
