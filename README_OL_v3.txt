@@ -1,8 +1,9 @@
 Cameron Blankenship OL Weekly Scouting Engine v4
 
-Dark-mode ULM build with a two-opponent toggle:
+Dark-mode ULM build with a three-opponent toggle:
 - UAB loads first
 - Mississippi State remains available on the same screen
+- Southeastern Louisiana is available as the third opponent tab
 - Both complete play feeds are embedded in a local JavaScript dataset, so switching works when index.html is opened directly from Windows
 - The actual maroon star ULM roundel is packaged in the assets folder
 - index.html is now fully self-contained: the opponent data and roundel are also embedded directly in that one file for GitHub/Vercel deployment
