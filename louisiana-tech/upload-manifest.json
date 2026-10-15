@@ -2,13 +2,13 @@
   "team": "Louisiana Tech",
   "season": 2026,
   "week": 7,
-  "storageBase": "https://hzrosmevuejjlxigdxmg.supabase.co/storage/v1/object/public/Offensive%20Intelligence/Louisiana%20Tech/Current/",
+  "storageBase": "https://hzrosmevuejjlxigdxmg.supabase.co/storage/v1/object/public/Offensive%20Intelligence/Current/Louisiana%20Tech/",
   "files": {
-    "plays": "play_feed.csv"
+    "plays": "play_feed-6.csv"
   },
   "teamField": "pff_DEFTEAM",
   "teamCodes": [
-    "LATU"
+    "LATC"
   ],
   "rosterFile": "roster.json"
 }
